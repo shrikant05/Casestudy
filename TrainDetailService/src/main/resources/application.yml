@@ -1,0 +1,31 @@
+server:
+  port: 8082
+
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:8761/eureka
+
+spring:
+ application:
+   name: TrainDetailService
+
+ data:
+  mongodb:
+   port: 27017
+   database: TrainData
+   host: localhost
+
+
+data:
+ exception:
+  msg1: Train Number Data Found Already!!!!
+  msg2: Train Number Not Found!!!!
+  
+logging:
+ file:
+  name: logfiles/traindetaillog.log
+ level:
+  com:
+   cg:
+    traindetail: DEBUG
