@@ -1,0 +1,36 @@
+server:
+  port: 8081
+
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:8761/eureka
+   
+spring:
+ application:
+  name: LoginRegisterService
+
+
+ data:
+  mongodb:
+   port: 27017
+   database: RailwayUserData
+   host: localhost
+
+   # jwt Properties
+jwt:
+ CookieName: Bearer
+ Secret: secretKey123
+ ExpirationMs: 86400000
+ 
+logging:
+ file:
+  name: logfiles/logintraindetaillog.log
+ level:
+  com:
+   cg:
+    loginregister: DEBUG
+ 
+
+
+
