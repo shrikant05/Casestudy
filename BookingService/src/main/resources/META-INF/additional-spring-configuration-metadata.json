@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.data.mongodb.user",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.data.mongodb.user'"
+  },
+  {
+    "name": "data.exception.msg1",
+    "type": "java.lang.String",
+    "description": "A description for 'data.exception.msg1'"
+  },
+  {
+    "name": "data.exception.msg2",
+    "type": "java.lang.String",
+    "description": "A description for 'data.exception.msg2'"
+  }
+]}

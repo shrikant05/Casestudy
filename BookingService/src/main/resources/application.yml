@@ -1,0 +1,30 @@
+server:
+  port: 8083
+  
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:8761/eureka
+
+spring:
+ application:
+   name: BookingService
+
+ data:
+  mongodb:
+   port: 27017
+   database: TrainBookingData
+   host: localhost
+   
+data:
+ exception:
+  msg1: PNR Number Data Found Already!!!!
+  msg2: PNR Number Not Found!!!!
+
+logging:
+ file:
+  name: logfiles/bookingdetaillog.log
+ level:
+  com:
+   cg:
+    trainbooking: DEBUG
