@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+eureka:
+ client:
+  service-url:
+   defaultZone : http://localhost:8761/eureka
+
+spring:
+ application:
+  name: APIGateWayService
+ cloud:
+   gateway:
+      routes:
+      - id: LoginRegisterModule
+        uri: http://localhost:8081/
+        predicates:
+        - Path= /api/auth/**
+      - id: TrainDetailModule
+        uri: http://localhost:8082/
+        predicates:
+        - Path=/api/v1/traindetail/**
+      - id: BookingModule
+        uri: http://localhost:8083/
+        predicates:
+        - Path= /api/v1/booking/**
+      - id: PaymentModule
+        uri: http://localhost:8084/
+        predicates:
+        - Path=/api/v1/payment/**
+
+        
