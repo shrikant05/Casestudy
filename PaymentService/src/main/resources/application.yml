@@ -1,0 +1,31 @@
+server:
+  port: 8084
+
+
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:8761/eureka
+   
+spring:
+ application:
+   name: PaymentService
+   
+ data:
+  mongodb:
+   port: 27017
+   database: TrainPaymentData
+   host: localhost
+
+data:
+ exception:
+  msg1: Transaction ID Data Found Already in Database!!!!
+  msg2: Transaction ID Not Found!!!!
+  
+logging:
+ file:
+  name: logfiles/paymentdetaillog.log
+ level:
+  com:
+   cg:
+    payment: DEBUG
