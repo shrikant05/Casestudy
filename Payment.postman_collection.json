@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "40cd8eda-3963-400e-b1b9-1084ff5ea71e",
+		"name": "Payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20559110"
+	},
+	"item": [
+		{
+			"name": "/welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/v1/payment/welcome"
+			},
+			"response": []
+		},
+		{
+			"name": "/payment/pay",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\": 4,\r\n    \"totalAmount\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/payment/pay"
+			},
+			"response": []
+		},
+		{
+			"name": "/payment/refundPayment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\": 4,\r\n    \"totalAmount\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8084/api/v1/payment/refundPayment"
+			},
+			"response": []
+		},
+		{
+			"name": "/getAllPayment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/v1/payment/getAllPayment"
+			},
+			"response": []
+		},
+		{
+			"name": "/getPaymentByTxn/ab6bdf3e-74e8-47a0-9ad4-b7182b0ddfa8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8084/api/v1/payment/getPaymentByTxn/ab6bdf3e-74e8-47a0-9ad4-b7182b0ddfa8"
+			},
+			"response": []
+		}
+	]
+}

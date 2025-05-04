@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "932db97d-2174-4360-9b08-59362adcebf2",
+		"name": "LoginRegister",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20559110"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"5hrik\",\r\n    \"email\":\"username123@gmail.com\",\r\n    \"password\":\"1246677\",\r\n    \"roles\":[\"admin\"]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/auth/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"5hrik\",\r\n    \"password\":\"1246677\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/auth/signin"
+			},
+			"response": []
+		},
+		{
+			"name": "/Home",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "localhost:8080/api/auth/Home"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/auth/Home/foradmin"
+			},
+			"response": []
+		}
+	]
+}

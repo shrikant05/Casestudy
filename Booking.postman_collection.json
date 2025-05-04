@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "f7604aaf-617a-441b-8ba8-8e0d0f968e4e",
+		"name": "Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20559110"
+	},
+	"item": [
+		{
+			"name": "addPass",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":45784,\r\n    \"train_name\":\"Chennai Express\",\r\n    \"train_no\":25,\r\n    \"price_per_seat\":100,\r\n    \"seat_count\":2,\r\n    \"dateOfJourney\":\"2022-05-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/booking/placeBooking"
+			},
+			"response": []
+		},
+		{
+			"name": "placeBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":125,\r\n    \"train_name\":\"Chennai Express\",\r\n    \"train_no\":25,\r\n    \"price_per_seat\":100,\r\n    \"seat_count\":2,\r\n    \"dateOfJourney\":\"2022-05-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/booking/placeBooking/Payment"
+			},
+			"response": []
+		},
+		{
+			"name": "/getAllBooking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/v1/booking/getAllBooking"
+			},
+			"response": []
+		},
+		{
+			"name": "getBookingByPnr/45",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/v1/booking/getBookingByPnr/99"
+			},
+			"response": []
+		},
+		{
+			"name": "/cancelBookingByPnr/45",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/booking/cancelBookingByPnr/99"
+			},
+			"response": []
+		},
+		{
+			"name": "/updateBooking/12345",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\": 99,\r\n    \"train_name\": \"Chennai Expres\",\r\n    \"train_no\": 25,\r\n    \"price_per_seat\": 200.0,\r\n    \"seat_count\": 2,\r\n    \"dateOfJourney\": \"2022-05-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/booking/updateBooking/45784"
+			},
+			"response": []
+		}
+	]
+}

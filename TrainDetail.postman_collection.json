@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "f323c1e0-3060-4361-958c-8361b232961e",
+		"name": "TrainDetail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20559110"
+	},
+	"item": [
+		{
+			"name": "addTrain",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"train_no\": 37,\r\n    \"train_name\": \"Chennai Express\",\r\n    \"seats\": {\"D1\":78,\"D2\":77,\"D3\":25},\r\n    \"travelDate\": \"2022-05-21\",\r\n    \"startStation\": \"Chennai\",\r\n    \"destStation\": \"Mumbai\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/traindetail/addTrain"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTrain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/v1/traindetail/getAllTrain"
+			},
+			"response": []
+		},
+		{
+			"name": "getTrainById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/api/v1/traindetail/getTrainById/2"
+			},
+			"response": []
+		},
+		{
+			"name": "updateTrain",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"train_no\": 2,\r\n    \"train_name\": \"Chennai Express\",\r\n    \"seats\": {\r\n        \"D1\": 78,\r\n        \"D2\": 87,\r\n        \"D3\": 25\r\n    },\r\n    \"travelDate\": \"2022-05-14\",\r\n    \"startStation\": \"Chenna\",\r\n    \"destStation\": \"Mumbai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/v1/traindetail/updateTrain/2"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/api/v1/traindetail/deleteTrainById/2"
+			},
+			"response": []
+		}
+	]
+}
