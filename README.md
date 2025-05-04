@@ -18,7 +18,8 @@ Refer to the image attached |
 
 ******* To connect Microservice with Frontend *******
 
-To connect Microservice with Frontend successfully dont forget to add @CrossOrigin(origins="http://localhost:4200", maxAge = 3600, allowCredentials="true") above controller class
+1)To connect Microservice with Frontend successfully dont forget to add @CrossOrigin(origins="http://localhost:4200", maxAge = 3600, allowCredentials="true") above controller class
 This annotation enables cross-origin requests, allowing front-end applications running on different domains to access the backend API.
+2) complete frontend code is available in attached github link : https://github.com/shrikant05/Casestudy_frontend
 
 
